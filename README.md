@@ -19,5 +19,5 @@ ___
 [Bootstrap](https://getbootstrap.com/)<br>
 [Github Pages](https://pages.github.com/)<br>
 [GoDaddy](https://www.godaddy.com/)<br>
-[Shopify](https://www.shopify.com/)
+<!-- [Shopify](https://www.shopify.com/) -->
 ___
