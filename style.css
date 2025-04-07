@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald:300,400,700');
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Vujahday+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
 
 html {
   scroll-behavior: smooth !important; 
@@ -41,6 +41,14 @@ html {
 .modal-content {
   background-color: #C2B280;
   opacity: 90%;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px; 
+}
+
+.modal-content h6 {
+  font-family: "Vujahday Script", cursive; 
 }
 
 .modal-content button {
@@ -97,6 +105,7 @@ html {
   width: 100%;
   height: 60px;
   background-color: #814141;  
+  filter:contrast(80%);
 }
 
 #footer small {
@@ -112,8 +121,8 @@ html {
   max-height: 200px !important;
 }
 
-.title {
-  background-color: #5F8575 !important; 
+.title { 
+  background-color: rgba(95, 133, 117, 0.6) ! important;
   height: 180px;
   overflow-x: hidden !important;
   overflow-y: hidden !important;
@@ -125,6 +134,12 @@ html {
   color: white !important;
   filter:brightness(120%) !important; 
 } 
+
+#banner-text {
+  font-size: 1.65rem !important;
+  margin-left: -1.25rem !important; 
+  padding-top: 0.313rem !important; 
+}
 
 .fade-in {
   opacity: 0;
@@ -138,17 +153,19 @@ html {
 
 @media only screen and (max-width: 600px) { 
   .title {
-    height: 11.25rem; 
+    height: 10.25rem; 
     margin-top: 15px !important;
     margin-bottom: 15px !important;
   }
 
   .title h3, h1 {
     transform: translateY(-25px) !important;
+    white-space: nowrap !important;
   }
 
   .title h3 {
     font-size: 1.6vw !important; 
+    margin-top: 13px;
   }
 }
 
@@ -170,23 +187,41 @@ html {
   margin:0 auto;
 }
 
-section {
-  background-color: #C4A484 !important; 
+section { 
+  background-color: rgba(196, 164, 132, 0.8) !important; 
 }
 
-.block {
-  background-color: #FCF5E5 !important;  
+.block { 
+ background-color: rgba(196, 164, 132, 0.3) !important;
+ filter:contrast(60%);
+}
+
+#content {
+  filter: brightness(95%) !important;
 }
 
 @media (max-width: 768px) {
   .block {
-     padding: 3vh !important; 
+    display: flex !important; 
+    flex-direction: column !important; 
+    justify-content: center !important; 
+    align-items: center !important; 
+    padding: 3vh !important; 
+    height: 100% !important; 
   }
+  
   .block p {
     font-size: clamp(8px, 1.4vw, 20px) !important;
     text-align: center !important; 
     word-wrap: break-word !important; 
-    padding-top: 3vh !important;
+    margin: 0 !important; 
+    line-height: 2.6 !important; 
+    flex: 1 !important; 
+    display: flex !important; 
+    align-items: center !important; 
+  }
+  #shop {
+    margin-bottom: 60px !important;
   }
 }
 
@@ -207,22 +242,30 @@ section {
 }
   
 .margin-top-10 {
-  padding-top:10px;
+  padding-top: 10px;
 }
 
 .margin-bot-10 {
-  padding-bottom:10px;
+  padding-bottom: 10px;
 }
 
 .parallax-one h2, 
 .parallax-two h2, 
 .parallax-three h2 {
-  font-family: "Caveat", cursive !important;
+  font-family: "Caveat Brush", cursive !important;
+  font-style: italic;
   filter: brightness(120%) !important; 
-  font-size: 1.75rem !important;  
+  font-size: 1.35rem !important;  
   padding: 10px;
   color: white !important; 
   letter-spacing: 2px !important;
+  margin: 0 auto !important;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6); 
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  width: fit-content !important;
+  white-space: nowrap;
+  overflow: hidden; 
 }
 
 #parallax-world-of-ugg h1 {
@@ -230,7 +273,7 @@ section {
   font-size:24px; 
   font-weight:400; 
   text-transform: uppercase; 
-  color:black; 
+  color:black;
   padding:0; 
   margin:0;
 }
@@ -258,9 +301,10 @@ section {
 }
 
 #parallax-world-of-ugg p {
-  font-family:'Source Sans Pro', sans-serif; 
-  font-weight:400; 
-  font-size:14px; 
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size:12px; 
   line-height:24px;
 }
 .first-character {
@@ -271,7 +315,6 @@ section {
   padding-top: 4px; 
   padding-right: 8px; 
   padding-left: 3px; 
-  font-family: 'Source Sans Pro', sans-serif;
 }
 
 #parallax-world-of-ugg .title {
@@ -315,7 +358,7 @@ section {
   overflow: hidden;
   position: relative;
   width: 100%;
-  background-image: url(https://flexfit-headwear.com/wp-content/uploads/2024/03/Overseas-Banner-scaled-1.jpg.webp);
+  background-image: url(./assets/images/stock-banner-1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
@@ -339,7 +382,7 @@ section {
   overflow: hidden; 
   position: relative; 
   width: 100%; 
-  background-image: url(https://cdn.prod.website-files.com/632a7221463e88a372002e32/63994ad21b429458a7b73bf5_custom-hats-hero.webp); 
+  background-image: url(./assets/images/stock-banner-2.webp);
   background-attachment: fixed; 
   background-size: cover; 
   -moz-background-size: cover; 
@@ -354,7 +397,7 @@ section {
   overflow: hidden; 
   position: relative; 
   width: 100%; 
-  background-image: url(https://images.squarespace-cdn.com/content/v1/576279771b631ba7b6a5b6a9/1466158988822-WVDA7S1QCO5DJ9R80V5S/banner.jpeg); 
+  background-image: url(./assets/images/stock-banner-3.jpeg);
   background-attachment: fixed; 
   background-size: cover; 
   -moz-background-size: cover; 

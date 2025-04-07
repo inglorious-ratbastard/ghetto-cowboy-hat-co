@@ -4,9 +4,9 @@ const bannerText = document.getElementById("banner-text");
 
 setInterval(() => {
     index = (index + 1) % texts.length;
-    bannerText.classList.remove("fade-in"); // Reset animation
-    void bannerText.offsetWidth; // Trigger reflow to restart animation
+    bannerText.classList.remove("fade-in"); 
+    void bannerText.offsetWidth; 
     bannerText.textContent = texts[index];
-    bannerText.classList.add("fade-in"); // Apply animation again
+    bannerText.classList.add("fade-in"); 
 }, 10000);
 
