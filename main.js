@@ -11,5 +11,5 @@ setInterval(() => {
 }, 10000);
 
 if (window.location.hash) {
-    history.replaceState('', document.title, window.location.origin);
-  } 
+    history.replaceState('', document.title, window.location.pathname + window.location.search);
+  }
