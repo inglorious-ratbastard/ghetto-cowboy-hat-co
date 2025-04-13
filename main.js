@@ -9,3 +9,7 @@ setInterval(() => {
     bannerText.textContent = texts[index];
     bannerText.classList.add("fade-in"); 
 }, 10000);
+
+if (window.location.hash) {
+    history.replaceState('', document.title, window.location.origin);
+  } 
