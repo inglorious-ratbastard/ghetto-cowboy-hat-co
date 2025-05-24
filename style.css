@@ -98,8 +98,9 @@ html {
   }
 }
 
-#footer {
-  position: fixed;
+#footer { 
+  position: static; 
+  clear: both;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -174,7 +175,7 @@ html {
 }
 
 #about, #store, #shop {
-  height: 100vh !important;
+  height: 100vh !important; 
   margin-bottom: 0px !important;
 } 
 
@@ -194,6 +195,7 @@ section {
 .block { 
  background-color: rgba(196, 164, 132, 0.3) !important;
  filter:contrast(60%);
+ width: 70vw !important;
 }
 
 #content {
@@ -201,6 +203,28 @@ section {
 }
 
 @media (max-width: 768px) {
+  #banner-text {
+    letter-spacing: 3px !important;
+    margin-left: -20px !important;
+  }
+
+  .block {
+    width: 100vw !important;
+  }
+
+  .parallax-one, .parallax-two, .parallax-three {
+    height: 80vh;
+    display: flex;
+    justify-content: center;  
+    align-items: center;  
+  }
+
+  .parallax-one h2, .parallax-two h2, .parallax-three h2 {
+    white-space: pre-wrap !important; 
+    white-space: -moz-pre-wrap !important; 
+    word-wrap: break-word !important; 
+  }
+
   .block {
     display: flex !important; 
     flex-direction: column !important; 
@@ -220,9 +244,7 @@ section {
     display: flex !important; 
     align-items: center !important; 
   }
-  #shop {
-    margin-bottom: 60px !important;
-  }
+
 }
 
 .sc {
