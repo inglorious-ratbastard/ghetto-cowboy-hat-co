@@ -16,7 +16,7 @@ ___
 ##### Your contribution will be reviewed and considered for merge into Main or a separate branch.<br> Thank you for assisting in the development and/or advancement of this project.
 ___
 ##### **Resources:**
-[Bootstrap](https://getbootstrap.com/)<br>
+[Foundation Framework](https://get.foundation/)<br>
 [Github Pages](https://pages.github.com/)<br>
 [GoDaddy](https://www.godaddy.com/)<br>
 <!-- [Shopify](https://www.shopify.com/) -->
