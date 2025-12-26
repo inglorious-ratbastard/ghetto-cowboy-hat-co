@@ -1,157 +1,372 @@
 <!DOCTYPE html>
-  <html>
-    <head>
-      <title>Ghetto Cowboy Hat Co.</title>
-      <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
-      <link rel="stylesheet" href="style.css" />
-    </head>
+<html lang="en">
 
-    <body>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand ms-2 fw-bold" href="#">Ghetto Cowboy</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-           <span id="thinz" class="fa fa-thin fa-ellipsis-vertical"></span>
-          </button>
-          <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link text-white ms-4" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white ms-4" href="#about">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white ms-3" href="#store">Store</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white ms-3" href="#shop">Shop</a>
-              </li>
-              <li class="nav-item">
-                <button type="button" class="btn btn-sm btn-outline-success ms-4" data-bs-toggle="modal" data-bs-target="#exampleModal">Get The Brim</button>
-              </li>
-            </ul> 
+<head>
+  <meta charset="UTF-8" />
+  <title>Ghetto Cowboy Hat Co.</title>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/css/foundation.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/spectrum-vanilla/dist/spectrum.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="top-bar" id="main-menu">
+    <div class="top-bar-left">
+      <a class="topbar-title fw-bold vertical show-for-large" href="#">Ghetto Cowboy</a>
+    </div>
+    <div class="top-bar-left show-for-large clearfix">
+      <ul class="dropdown menu float-left" data-dropdown-menu>
+        <li><a href="#" class="text-white">Home</a></li>
+        <li><a href="#about" class="text-white">About</a></li>
+        <li><a href="#store" class="text-white">Store</a></li>
+        <li><a href="#shop" class="text-white">Shop</a></li>
+        <li>
+          <button class="hollow button small" data-open="feedbackModal">Get The Brim</button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="top-bar-right hide-for-large">
+      <button class="menu-icon dark" type="button" data-toggle="offCanvasBottom"></button>
+      <a class="topbar-title fw-bold vertical" style="margin-left: 20px;" href="#">Ghetto Cowboy</a>
+    </div>
+  </div>
+  
+  <div class="off-canvas position-bottom" id="offCanvasBottom" data-off-canvas>
+    <ul class="vertical menu text-center align-center">
+      <li><a href="#">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#store">Store</a></li>
+      <li><a href="#shop">Shop</a></li>
+      <li><button class="button small" data-open="feedbackModal">Get The Brim</button></li>
+    </ul>
+  </div>
+
+  <div class="reveal text-dark" id="feedbackModal" data-reveal>
+    <div class="grid-container small">
+      <button class="close-button" id="closeBtn" aria-label="Close alert" type="button" data-close>
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <h5 class="text-center fw-bold">Ghetto Cowboy Hat Co.</h5>
+      <p class="text-center small" id="feedbackInfo">
+        Your style and comfort matter to us! We're dedicated to working with you every <br>
+        step of the way to ensure you get the best possible fit. Just let us know what <br>
+        you need, and we'll make it happen for you.
+      </p>
+      <hr />
+      <label class="small text-small" style="font-size: 13px; margin-top: 20px;">
+        Full Name:
+        <input type="text" id="feedbackName" placeholder="Enter your Full Name" required>
+      </label>
+      <label class="small fw-bold" style="font-size: 13px;">
+        E-mail Address:
+        <input type="email" id="feedbackEmail" placeholder="Enter your E-Mail Address" required>
+      </label>
+      <label class="small fw-bold" style="font-size: 13px;">
+        Spit that Feedback:
+        <textarea id="feedbackText" rows="3"></textarea>
+      </label>
+      <label>
+        <input type="checkbox" id="flexCheckDefault" />
+        <span class="small fst-italic" style="font-size: 13px;">Subscribe to our Newsletter</span>
+      </label>
+      <div class="text-center">  
+        <button id="submitBtn" class="button small primary w-25" data-close disabled>Submit</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="gchc-main">
+    <section id="title-section">
+      <div class="title text-center">
+        <h3 id="company-name">Ghetto Cowboy Hat Co.</h3>
+        <h1 id="banner-text" class="fade-in">Custom Designs</h1>
+      </div>
+    </section>
+
+    <section>
+      <div class="parallax-one text-center">
+        <h2>Custom hats, Limitless style</h2>
+      </div>
+    </section>
+
+    <section id="content">
+      <div class="block" id="about"> 
+        <div class="grid-y grid-margin-y text-center">
+          <div class="cell small-6 medium-4 large-10"> 
+            <img class="thumbnail" src="https://ih1.redbubble.net/image.5256974348.6423/ssrco,dad_hat,product,FFFDF5:8c3db69414,front,square,600x600-bg,f8f8f8.jpg" alt="Ghetto Cowboy Hat Co."> 
+            <h6>Ghetto Cowboy Hat  Company</h6> 
+            <div class="paragraph-wrap"> 
+              <p>Ghetto Cowboy Hat Co. is dedicated to crafting the ultimate personalized baseball cap that matches your unique style and vision. Every hat is designed with precision to reflect your individuality and creativity. From custom colors to bespoke embroidery, we ensure each detail aligns perfectly with your preferences. Our mission is to combine quality, comfort, and style so your cap feels as good as it looks. We pride ourselves on making hats that stand out, turning everyday headwear into a statement piece. Experience a cap that’s truly yours, designed to showcase your personality wherever you go.</p>
+            </div>
           </div>
-        </div>
 
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel">
-          <div class="modal-dialog modal-dialog-centered mt-0">
-            <div class="modal-content text-dark">
-              <div class="modal-body">
-                <div class="container">
-                  <div class="row">
-                    <div class="col text-center small">
-                      <h6 class="text-center text-wrap fw-bold">Ghetto Cowboy Hat Co.</h6>
-                      <span>Your style and comfort matter to us! We're dedicated to working with you every step of the way to ensure you get the best possible fit. Just let us know what you need, and we'll make it happen for you.</span>
-                      <hr>
-                    </div>
-                  </div>
+          <div class="cell small-6 medium-4 large-10">
+            <div class="paragraph-wrap">
+              <div class="slider" id="slider1">
+                <div class="slides">
+                  <div class="slide" style="background-image: url(https://hakahat.com/cdn/shop/files/Haka-Custom-Trucker-Hats-School-Business-Construction.jpg);"></div>
+                  <div class="slide" style="background-image: url(https://www.pukkainc.com/media/zjllyutq/header_2026_customcatalog-02.jpg);"></div>
+                  <div class="slide" style="background-image: url(https://hakahat.com/cdn/shop/files/Haka-Custom-Trucker-Hat-Order-Trio-Stack-Trades-Construction.jpg);"></div>
+                  <div class="slide" style="background-image: url(https://promo.outdoorcap.com/media/wysiwyg/custom/custom_hero-promo.png);"></div>
+                  <div class="slide" style="background-image: url(https://cdn.shopify.com/s/files/1/0273/0308/4126/files/Haka-Custom-Collage.jpg);"></div>
                 </div>
-                <div class="mb-3">
-                  <label for="exampleFormControlInput1" class="form-label small fw-bold">E-mail Address:</label>
-                  <input type="email" class="form-control small" id="exampleFormControlInput1">
-                </div>
-                <div class="mb-3">
-                  <label for="exampleFormControlTextarea1" class="form-label small fw-bold">Spit that Freedback:</label>
-                  <textarea class="form-control small" id="exampleFormControlTextarea1" rows="3"></textarea>
-                </div>
-                <div class="container">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label small fst-italic" for="flexCheckDefault">Subscribe to our Newsletter</label>
+                <div class="navigation">
+                  <button class="prev">Prev</button>
+                  <div class="dots">
+                    <span class="dot active">
+                      <div class="progress"></div>
+                    </span>
+                    <span class="dot">
+                      <div class="progress"></div>
+                    </span>
+                    <span class="dot">
+                      <div class="progress"></div>
+                    </span>
+                    <span class="dot">
+                      <div class="progress"></div>
+                    </span>
+                    <span class="dot">
+                      <div class="progress"></div>
+                    </span>
                   </div>
-                  <div class="row">
-                    <div class="col text-center">
-                      <button class="btn btn-sm btn-primary border border-white w-25 mt-2" data-bs-dismiss="modal">Submit</button>
-                    </div>
-                  </div>
+                  <button class="next">Next</button>
                 </div>
               </div>
-            </div> 
-          </div>
-        </div>
-
-      </nav>
-
-      <div id="parallax-world-of-ugg">
-  
-        <section id="title-section">
-          <div class="title"> 
-            <h3 id="company-name">Ghetto Cowboy Hat Co.</h3>
-            <h1 id="banner-text" class="fade-in">Custom Designs</h1> 
-          </div>
-        </section>
-        
-        <section>
-            <div class="parallax-one">
-              <h2>Custom hats, Limitless style</h2>
             </div>
-        </section>
-       
-        <section class="my-0" id="content">
-          <div class="block" id="about">
-            <p><span class="first-character sc">I</span>n 1978, Brian Smith landed in Southern California with a bag of sheepskin boots and hope. He fell in love with the sheepskin experience and was convinced the world would one day share this love. The beaches of Southern California had long been an epicenter of a relaxed, casual lifestyle, a lifestyle that Brian felt was a perfect fit for his brand. So he founded the UGG brand, began selling his sheepskin boots and they were an immediate sensation. By the mid 1980's, the UGG brand became a symbol of relaxed southern California culture, gaining momentum through surf shops and other shops up and down the coast of California, from San Diego to Santa Cruz. UGG boots reached beyond the beach, popping up in big cities and small towns all over, and in every level of society. Girls wore their surfer boyfriend's pair of UGG boots like a letterman jacket. When winter came along, UGG boots were in ski shops and were seen in lodges from Mammoth to Aspen.</p>
-            <p class="line-break margin-top-10"></p>
-            <p class="margin-top-10">The UGG brand began to symbolize those who embraced sport and a relaxed, active lifestyle. More than that, an emotional connection and a true feeling of love began to grow for UGG boots, just as Brian had envisioned. People didn't just like wearing UGG boots, they fell in love with them and literally could not take them off. By the end of the 90's, celebrities and those in the fashion world took notice of the UGG brand. A cultural shift occurred as well - people were embracing, and feeling empowered, by living a more casual lifestyle and UGG became one of the symbols of this lifestyle. By 2000, a love that began on the beaches had become an icon of casual style. It was at this time that the love for UGG grew in the east, over the Rockies and in Chicago. In 2000, UGG Sheepskin boots were first featured on Oprah's Favorite Things® and Oprah emphatically declared that she "LOOOOOVES her UGG boots." From that point on, the world began to notice.</p>
           </div>
-        </section>
-        
-        <section>
-          <div class="parallax-two">
-            <h2>It's not just a hat it's a statement</h2>
-          </div>
-        </section>
-        
-        <section id="content">
-          <div class="block" id="store">
-            <p><span class="first-character">B</span>reaking into the New York fashion world is no easy task. But by the early 2000's, UGG Australia began to take it by storm. The evolution of UGG from a brand that made sheepskin boots, slippers, clogs and sandals for an active, outdoor lifestyle to a brand that was now being touted as a symbol of a stylish, casual and luxurious lifestyle was swift. Much of this was due to a brand repositioning effort that transformed UGG into a high-end luxury footwear maker. As a fashion brand, UGG advertisements now graced the pages of Vogue Magazine as well as other fashion books. In the mid 2000's, the desire for premium casual fashion was popping up all over the world and UGG was now perfectly aligned with this movement.</p>
-            <p class="line-break margin-top-10"></p>
-            <p class="margin-top-10">Fueled by celebrities from coast to coast wearing UGG boots and slippers on their downtime, an entirely new era of fashion was carved out. As a result, the desire and love for UGG increased as people wanted to go deeper into this relaxed UGG experience. UGG began offering numerous color and style variations on their sheepskin boots and slippers. Cold weather boots for women and men and leather casuals were added with great success. What started as a niche item, UGG sheepskin boots were now a must-have staple in everyone's wardrobe. More UGG collections followed, showcasing everything from knit boots to sneakers to wedges, all the while maintaining that luxurious feel UGG is known for all over the world. UGG products were now seen on runways and in fashion shoots from coast to coast. Before long, the love spread even further.</p>
-          </div>
-        </section>
-        
-        <section>
-          <div class="parallax-three">
-            <h2>No one else's hat but yours</h2>
-          </div>
-        </section>
-        
-        <section id="content">
-          <div class="block" id="shop">
-            <p><span class="first-character atw">W</span>hen the New York fashion community notices your brand, the world soon follows. The widespread love for UGG extended to Europe in the mid-2000's along with the stylish casual movement and demand for premium casual fashion. UGG boots and shoes were now seen walking the streets of London, Paris and Amsterdam with regularity. To meet the rising demand from new fans, UGG opened flagship stores in the UK and an additional location in Moscow. As the love spread farther East, concept stores were opened in Beijing, Shanghai and Tokyo. UGG Australia is now an international brand that is loved by all. This love is a result of a magical combination of the amazing functional benefits of sheepskin and the heightened emotional feeling you get when you slip them on your feet. In short, you just feel better all over when you wear UGG boots, slippers, and shoes.</p>
-            <p class="line-break margin-top-10"></p>
-            <p class="margin-top-10">In 2011, UGG will go back to its roots and focus on bringing the active men that brought the brand to life back with new styles allowing them to love the brand again as well. Partnering with Super Bowl champion and NFL MVP Tom Brady, UGG will invite even more men to feel the love the rest of the world knows so well. UGG will also step into the world of high fashion with UGG Collection. The UGG Collection fuses the timeless craft of Italian shoemaking with the reliable magic of sheepskin, bringing the luxurious feel of UGG to high end fashion. As the love for UGG continues to spread across the world, we have continued to offer new and unexpected ways to experience the brand. The UGG journey continues on and the love for UGG continues to spread.</p>
-          </div>
-        </section>
-          
+  
         </div>
+      </div>
+    </section>
 
-      <footer id="footer" class="d-flex flex-column flex-md-row justify-content-between align-items-center p-2 pb-5 pb-md-3">
-        <div class="text-white text-md-start flex-fill">
-           <small class="foot-title">&copy;&nbsp;Ghetto Cowboy Hat Co.</small>
-         </div>
-         
-         <ul class="list-inline d-flex flex-wrap justify-content-center gap-3 m-0 flex-fill">
-           <li class="list-inline-item">
-             <a href="#" class="text-white link-underline link-underline-opacity-0 ms-6">Home</a>
-           </li>
-           <li class="list-inline-item">
-             <a href="#about" class="text-white link-underline link-underline-opacity-0">About</a>
-           </li>
-           <li class="list-inline-item">
-             <a href="#store" class="text-white link-underline link-underline-opacity-0">Store</a>
-           </li>
-           <li class="list-inline-item">
-             <a href="#shop" class="text-white link-underline link-underline-opacity-0">Shop</a>
-           </li>
-         </ul> 
-        </footer>
-      
-        
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-      <script src="main.js"></script>
-    </body>
-  </html>
+    <section>
+      <div class="parallax-two text-center">
+        <h2>It's not just a hat it's a statement</h2>
+      </div>
+    </section>
+
+    <section id="content">
+      <div class="block" id="store">  
+        <div class="grid-x grid-margin-x text-center">
+          <div class="cell small-12 medium-6">
+            <div class="thumbnail">
+              <img src= "https://blog.totallypromotional.com/wp-content/uploads/2021/03/hat-graphic-1.jpg">
+            </div>
+            <h6>Styled By Definition</h6>  
+            <p>Style is that fresh vibe we use to show who we are without even talking. It mixes looks, attitude, and energy into one unique package. When your fit hits, and your mood matches, that’s real style—bold, fluent, and personal. It evolves with trends but stays rooted in authentic choices. Style isn’t just clothing; it’s the feelings and stories behind every detail. Own your look, flex your truth, and keep glowing with a Ghetto Cowboy customized cap.</p> 
+          </div>
+          <div class="cell small-12 medium-6" style="margin-top: 10px !important;"> 
+            <div class="row accd"> 
+              <div class="columns">
+                <h6>Customizing Your Hat</h6>  
+                <ul class="accordion wide-accordion" data-accordion data-allow-all-closed="true">
+              <li class="accordion-item" data-accordion-item>
+                <a href="#" class="accordion-title">Fit your Dome</a> 
+                <div class="accordion-content" data-tab-content> 
+                  <p>Elevate your style with a fully customizable cap, tailoring the front panels and brim to match your vibe. Modern embroidery, bold prints, or sleek patches let you showcase logos, names, and icons with precision. Switch colors, textures, and stitching to create a unique look. Flexible design tools make updating your cap effortless, fun, and totally original now.</p>
+                </div>
+              </li>
+              <li class="accordion-item" data-accordion-item>
+                <a href="#" class="accordion-title">Dial In Your Style</a> 
+                <div class="accordion-content" data-tab-content>
+                  <p>Personalize your cap with style by customizing the two side panels exactly how you like. Swap in vibrant colors, add sleek patterns, or feature bold graphics to make it truly yours. Mix textures and finishes for a fresh, modern edge. Show off your vibe with unique logos, icons, or text that pops. Upgrade your headwear game effortlessly. Experiment freely — your cap, your rules.</p>
+                </div>
+              </li>
+              <li class="accordion-item" data-accordion-item>
+                <a href="#" class="accordion-title">Customize Your Cap</a> 
+                <div class="accordion-content" data-tab-content>
+                  <p><p>Create your perfect hat by customizing the back portion with modern options and sleek vibes. Choose a snapback for adjustable streetwear flair or go fitted for clean lines and premium comfort. This fresh upgrade lets your cap match your style, spotlighting unique color pops, tags, and textures. Mix trends and identity. Own the look and stand out anywhere that you go.</p> 
+                </div>
+              </li>
+              <li class="accordion-item" data-accordion-item>
+                <a href="#" class="accordion-title">Drip With Confidence</a> 
+                <div class="accordion-content" data-tab-content >
+                  <p><p>Putting the finishing touches on your baseball cap feels exciting and creative. Adjusting the fit, shaping the brim, and stitching personalized extras add flair. Consider patches, pins, or stickers to reflect your story. These final details turn a simple cap into something memorable and uniquely yours. Each small upgrade shows style and builds confidence up.</p></p> 
+                </div>
+              </li>
+            </ul>
+              </div>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="parallax-three text-center">
+        <h2>No one else's hat but yours</h2>
+      </div>
+    </section>
+
+    <section id="content">
+      <div class="block" id="shop">
+        <div class="grid-container">
+          <div class="grid-x align-center align-middle">
+            <div class="cell small-12 medium-6">
+              <div class="inner-box"">
+                  <div class=" card">
+                <button id="buildBtn" class="clear button alert small" data-open="builderModal"
+                  style="color: red !important; font-weight: bold;">Let’s Make That Hat Yours</button>
+                <div class="add-quantity">
+                  <button type="button" class="add-quantity__button add-quantity__minus-button"
+                    aria-label="Remove from cart">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="12" viewBox="0 -960 960 960" width="24"
+                      fill="currentColor">
+                      <path d="M200-440v-80h560v80H200Z" />
+                    </svg>
+                  </button>
+                  <button type="button" class="add-quantity__button add-quantity__delete-button"
+                    aria-label="Remove all from cart" data-delete-button>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="12" viewBox="0 -960 960 960" width="24"
+                      fill="currentColor">
+                      <path
+                        d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z" />
+                    </svg>
+                  </button>
+                  <input type="number" class="add-quantity__value" name="inputQuantity" min="0" max="99" step="1"
+                    value="0" readonly style="font-size: 12px;">
+                  <button type="button" class="add-quantity__button add-quantity__plus-button" aria-label="Add to cart"
+                    data-add-button>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="12" viewBox="0 -960 960 960" width="24"
+                      fill="currentColor">
+                      <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" />
+                    </svg>
+                  </button>
+                  <button type="button" class="add-quantity__add-button" aria-label="Add to cart" data-add-button >Add to
+                    cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cell small-12 medium-6">
+            <div class="inner-box text-center">
+              <h6>Develop Your Signature Style</h6> 
+              <p class="lead">Welcome to the Custom Hat Generator. Let's get going on creating your own personal hat
+                design. You can do so by following some easy steps to style out and rock the best hat that fits your
+                peronality. Get started by clicking on Let's Make That Hat Yours to start building.</p>
+              <p class="lead">Fill out the form properly then click on add to cart. Once you have your hat design ready,
+                you can add it to your cart and checkout. Please review your Purchase Details before submitting your
+                design. If you have any questions, please feel free to contact us. We look forward to working with you
+                for every personalized design.</p>
+              <a class="button tiny alert" id="reviewPurchase" href="#">Review Purchase</a>
+            </div>
+          </div>
+          <header class="header">
+            <div class="cart">
+              <svg class="cart__icon" xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="50"
+                fill="#000">
+                <path
+                  d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z" />
+              </svg>
+              <div class="cart__count">0</div>
+            </div>
+          </header>
+        </div>
+      </div>
+
+      <div class="reveal text-dark" id="builderModal" data-reveal>
+        <div class="grid-container small">
+          <button class="close-button" id="closeBtn" aria-label="Close alert" type="button" data-close>
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h5 class="text-center fw-bold">Ghetto Cowboy Hat Co.</h5>
+          <p id="buildInfo" class="text-center small">
+            Your style and comfort matter to us! We're dedicated to working with you every <br>
+            step of the way to ensure you get the best possible fit. Just let us know what <br>
+            you need, and we'll make it happen for you.
+          </p>
+          <hr />
+          <div class="grid-container">
+            <div class="grid-x grid-padding-x">
+              <div class="medium-6 small-6 cell">
+                <label class="color-label">Brim Color
+                  <input type="text" id="triggerSetBrim" class="triggerSet" placeholder="Color Selector">
+                </label>
+              </div>
+              <div class="medium-6 small-6 cell">
+                <label class="color-label">Front Color
+                  <input type="text" id="triggerSetFront" class="triggerSet" placeholder="Color Selector">
+                </label>
+              </div>
+              <div class="medium-6 small-6 cell">
+                <label class="color-label">Side Color
+                  <input type="text" id="triggerSetSide" class="triggerSet" placeholder="Color Selector">
+                </label>
+              </div>
+              <div class="medium-6 small-6 cell">
+                <label class="color-label">Back Color
+                  <input type="text" id="triggerSetBack" class="triggerSet" placeholder="Color Selector">
+                </label>
+              </div>
+              <label id="fileButton" for="fileUpload" class="hollow secondary button tiny">Upload File</label>
+              <input type="file" id="fileUpload" class="show-for-sr">
+            </div>
+          </div>
+          <fieldset class="fieldset text-center">
+            <legend>Bulk Order Option</legend>
+            <input id="bulkcheckbox" type="checkbox" style="height: 40% !important;"><label for="bulkcheckbox">Bulk
+              Order</label>
+            <label>
+              Total Number of Hats:
+              <input type="number" id="bulkNumber" value="0" style="font-size: 13px;">
+            </label>
+          </fieldset>
+          <label class="small text-small" style="font-size: 13px; margin-top: 20px;">Full Name:
+            <input type="text" id="fullNameInput" placeholder="Enter your full name" required>
+          </label>
+          <label class="small fw-bold" style="font-size: 13px;">Shipping Address: (optional)
+            <input type="text" id="shippingInput" placeholder="Enter your Shipping Address" />
+          </label>
+          <label class="small fw-bold" style="font-size: 13px;">E-mail Address:
+            <input type="email" id="emailInput" placeholder="Enter your E-mail Address" required />
+          </label>
+          <label class="small fw-bold" style="font-size: 13px;">Phone Number (optional):
+            <input type="tel" id="phoneNumberInput" placeholder="(123) 456-7890" />
+          </label>
+          <label class="small fw-bold" style="font-size: 13px;">Spit that Feedback:
+            <textarea id="orderFormText" rows="3"></textarea>
+          </label>
+          <label>
+            <input type="checkbox" id="orderCheckbox" />
+            <span class="small fst-italic" style="font-size: 13px;">Click Here to Verify Your Order Information
+              (<u>Required</u>)</span>
+          </label>
+          <div class="text-center">
+            <button id="builderSubmitBtn" type="button" class="button small primary w-25" disabled>Submit</button>
+
+          </div>
+        </div>
+      </div>
+  </div>
+  </section>
+    
+  </div>
+
+  <footer class="grid-x align-middle align-center text-center p-2 pb-3" id="footer">
+    <div class="cell small-12 medium-auto text-white medium-text-left">
+      <small class="foot-title">&copy; Ghetto Cowboy Hat Co.</small>
+    </div>
+
+    <div class="cell small-12 medium-shrink">
+      <ul class="menu medium-auto text-white meno-bullet mb-0">
+        <li><a href="#" class="text-white">Home</a></li>
+        <li><a href="#about" class="text-white">About</a></li>
+        <li><a href="#store" class="text-white">Store</a></li>
+        <li><a href="#shop" class="text-white">Shop</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/js/foundation.min.js"></script>
+  <script src="https://unpkg.com/spectrum-vanilla/dist/spectrum.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script> 
+  <script src="script.js"></script>
+
+</body>
+</html>
